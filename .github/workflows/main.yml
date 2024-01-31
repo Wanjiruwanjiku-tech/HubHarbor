@@ -1,27 +1,13 @@
-name: HubHarbor
-
+name: Comment when opened
 on:
-  push:
-    branches:
-      - main
-
+  issues:
+    types:
+      - opened
 jobs:
-  get-user-info:
+  comment:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Get User Information
-        run: node get-user-info.js
+      - run: gh issue comment $ISSUE --body "Thank you for opening this issue!"
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
