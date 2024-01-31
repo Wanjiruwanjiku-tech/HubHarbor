@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const username = 'your-username'; // Replace with the GitHub username you want to get information about
+const username = 'Wanjiruwanjiku-tech'; // Replace with the GitHub username you want to get information about
 const token = process.env.GITHUB_TOKEN;
 
 axios
