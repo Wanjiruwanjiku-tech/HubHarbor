@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HubHarbor</title>
     <link rel="stylesheet" href="/styles/landing.css">
+    <title>Github Search App</title>
 </head>
 <body>
-    <img src="/Images/logo.jpeg" alt="logo">
-    <h1>HubHarbor</h1>
-    <h4>"Get Your GitHub Stats"</h4>
+    <header>
+        <nav>
+           
+        </nav>
+    </header><br><hr>
+    <div>
+        <h1>HubHarbor</h1>
+        <hr>
+        <p>Your user profile has been detailed below</p>
+
+    </div>
     <div id="app">
         <input type="text" id="searchInput" placeholder="Enter GitHub username">
         <button onclick="searchUser()">Search</button>
-        <div id="results"></div>
+        <div id="userProfile"></div>
+        <div id="repoList"></div>
     </div>
-  <script src="/Scripts/main.js"></script>
+
+    <script src="/Scripts/main.js"></script>
 </body>
 </html>

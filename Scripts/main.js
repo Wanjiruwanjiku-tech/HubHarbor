@@ -1,17 +1,29 @@
 function searchUser() {
     const username = document.getElementById("searchInput").value;
 
-    // Perform GitHub API request using Fetch API
-    fetch(`https://api.github.com/users/${username}`)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the data and update the DOM
-            const resultsContainer = document.getElementById("results");
-            resultsContainer.innerHTML = `
-                <h2>${data.name}</h2>
-                <p>${data.bio}</p>
-                <img src="${data.avatar_url}" alt="Avatar">
-            `;
-        })
-        .catch(error => console.error("Error fetching data:", error));
+    // GitHub API URLs
+    const userUrl = `https://api.github.com/users/${username}`;
+    const reposUrl = `https://api.github.com/users/${username}/repos`;
+
+    // Perform GitHub API requests using Fetch API
+    Promise.all([
+        fetch(userUrl).then(response => response.json()),
+        fetch(reposUrl).then(response => response.json())
+    ])
+    .then(([userData, repoData]) => {
+        // Update user profile
+        const userProfileContainer = document.getElementById("userProfile");
+        userProfileContainer.innerHTML = `
+            <h2>${userData.name}</h2>
+            <p>${userData.bio}</p>
+            <img src="${userData.avatar_url}" alt="Avatar">
+        `;
+
+        // Update repository list
+        const repoListContainer = document.getElementById("repoList");
+        const repoList = repoData.map(repo => `<li>${repo.name}</li>`).join('');
+        repoListContainer.innerHTML = `<h3>Repositories:</h3><ul>${repoList}</ul>`;
+    })
+    .catch(error => console.error("Error fetching data:", error));
 }
+
