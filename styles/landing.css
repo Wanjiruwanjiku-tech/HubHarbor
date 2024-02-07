@@ -1,99 +1,66 @@
-#app {
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-#userProfile, #repoList {
-    margin-top: 20px;
-}
-/* describes styles for index.html */
-.texts {
-    text-align: center;
-    text-shadow: 2ch 2ch gray;
-}
-.titles {
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 900;
-    font-style: oblique;
-}
-.smalltitles{
-    text-align: center;
-    text-decoration: underline;
-    font-weight: lighter;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-}
-.navigation{
-    text-align: right;
-    word-spacing: normal;
-    padding: 10px;
-    border: 2px groove black;
-    text-transform: uppercase;
-    background-color: aliceblue;
-}
-.navbars{
-    background-color: white;
+* {
     box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid black;
 }
 
-/* Describes styles for the form.html */
-.field {
-    word-spacing: normal;
-    line-height: 2;
-    font-weight: 600;
-    font-size: large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0 auto;
-    padding: 10px;
-    color: teal;
-    background-color: whitesmoke;
-}
-.pictures {
+body {
+    background-image: url(/Images/logo.jpeg);
+    background-repeat: no-repeat;
+    font-family: sans-serif;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 280px;
-    padding: 5px ;
-    box-sizing: border-box;
-    width: 300px;
-    background-color: silver;
-
+    background-color: whitesmoke;
+    border-radius: 20px;
 }
-.heading {
+
+.navigation {
+    overflow: hidden;
+    background-image: ;
+    padding: 18px;
+}
+
+.navigation a {
+    float: left;
+    display: block;
+    color: white;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
     text-transform: uppercase;
-    text-decoration: underline solid silver;
-    color: rgb(21, 231, 238);
-    background-color: whitesmoke;
-}
-.push{
-    color: red;
-    background-color: black;
-    padding: 10px;
-}
-input{
-    font-weight: lighter;
-    text-align: justify;
-    background-color: mintcream;
-}
-/* END(form.html styles) */
-
-/* Link styles */
-
-/* Home.html styles */
-.home {
-    text-align: center;
-    color: navy;
+    color: #131720;
 }
 
-/* contact.html */
-.pic {
-    display: block;
+.GetStarted {
     float: right;
-    height: 300pxs;
+}
+
+.thumbnail {
+    height: 350px;
+    width: 300px;
+    border-radius: 20px;
+    float: right;
+}
+
+form{
+    background-color: #151f30;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    all: unset;
+    font: 15px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+}
+
+.column {
+    float: right;
+    width: 25%;
+    text-align: center;
+    background-color: #151f30;
 }

@@ -1,0 +1,68 @@
+* {
+    color: white;
+    font-family: cursive;
+    background-image: url(https://w.forfun.com/fetch/d0/d029fe1567ceab0a128da583665e7158.jpeg);
+    box-sizing: border-box;
+    border-radius: 29px;
+}
+#app {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#userProfile, #repoList {
+    margin-top: 20px;
+}
+
+.navigation {
+    display: block;
+    border: 10px;
+    text-align: center;
+}
+
+.navbars a {
+    text-decoration: none;
+    border: 0px;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.top {
+    float: right;
+    padding: 20px;
+    text-decoration: none;
+    font-size: xx-large;
+}
+input {
+    color: whitesmoke;
+    padding: 20px;
+    font-size: large;
+}
+
+button{
+    padding: 10px;
+    color: red;
+    font-weight: 900;
+}
+
+#app {
+    float: left;
+}
+.thumbnail{
+    height: 100px;
+    float: right;
+    opacity: 0.6;
+}
+
+.animated-element {
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  

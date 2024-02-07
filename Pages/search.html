@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/landing.css">
+    <link rel="stylesheet" href="/styles/search.css">
     <title>Github Search App</title>
 </head>
 <body>
@@ -12,23 +12,28 @@
             <header>
                 <nav class="navbars">
                     <p>
-                        <a href="/Landing_page/index.html">Home|</a>
-                        <a href="/pages/about.html">About us|</a>
-                        <a href="/pages/contact.html">Contact us|</a>
+                        <a href="/Landing_page/index.html">Home</a>
+                        <a href="/pages/about.html">About us</a>
+                        <a href="/pages/contact.html">Contact us</a>
                         <a href="/pages/form.html">Form</a>
                     </p>
                 </nav>
             </header>
         </div>
+
     </header><br><hr>
-    <div>
+    <div class="top">
         <h1>HubHarbor</h1>
         <hr>
-        <p>Your user profile has been detailed below</p>
-
     </div>
+    <hr>
+
+    <div class="animated-element" id="targetElement">
+        <p>Get Started....</p>
+    </div>
+
     <div id="app">
-        <input type="text" id="searchInput" placeholder="Enter GitHub username">
+        <input type="text" id="searchInput" placeholder="Enter GitHub username...">
         <button onclick="searchUser()">Search</button>
         <div id="userProfile"></div>
         <div id="repoList"></div>
