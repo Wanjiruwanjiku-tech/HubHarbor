@@ -1,9 +1,7 @@
 * {
-    color: white;
     font-family: cursive;
-    background-image: url(https://w.forfun.com/fetch/d0/d029fe1567ceab0a128da583665e7158.jpeg);
     box-sizing: border-box;
-    border-radius: 29px;
+    border-radius: 19px;
 }
 #app {
     max-width: 800px;
@@ -18,14 +16,17 @@
 .navigation {
     display: block;
     border: 10px;
-    text-align: center;
+    text-align: right;
+}
+.navigation a:hover{
+    color: rgb(27, 119, 224);
 }
 
 .navbars a {
     text-decoration: none;
     border: 0px;
     padding: 20px;
-    color: whitesmoke;
+    color: black;
 }
 
 .top {
@@ -34,16 +35,29 @@
     text-decoration: none;
     font-size: xx-large;
 }
+.put:hover {
+    transform: scale(1.2);
+    transition-duration: 200ms;
+}
 input {
-    color: whitesmoke;
     padding: 20px;
     font-size: large;
+}
+input:hover {
+    background-color: rgb(250, 186, 102);
+    transition-duration: 200ms;
 }
 
 button{
     padding: 10px;
     color: red;
     font-weight: 900;
+}
+button:hover {
+    background-color: black;
+    color: rgb(16, 136, 192);
+    transform: scale(1.1);
+    transition-duration: 200ms;
 }
 
 #app {
