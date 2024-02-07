@@ -8,8 +8,24 @@
     border: 10px;
 
 }
-.topbar img{
-  float:;
+.topbar {
+  border: 5px;
+  padding: 20px;
+  text-align: right;
+  background-color: ;
+}
+.topbar a {
+  text-decoration: none;
+  padding: 20px;
+  border: 30px;
+  color: black;
+  font-size: smaller;
+  font-weight: 800;
+}
+.topbar a:hover {
+  background-color: black;
+  color: aqua;
+  transition-duration: 200ms;
 }
   .box{
     height: 50px;

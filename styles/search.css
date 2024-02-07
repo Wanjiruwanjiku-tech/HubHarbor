@@ -19,7 +19,9 @@
     text-align: right;
 }
 .navigation a:hover{
-    color: rgb(27, 119, 224);
+    background-color: black;
+    color: aqua;
+    transition-duration: 200ms;
 }
 
 .navbars a {
