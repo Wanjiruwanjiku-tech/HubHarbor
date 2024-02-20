@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Review Form</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #052206;
+        }
+        h2 {
+            font-family: cursive;
+        }
+        .navigation {
+            overflow: hidden;
+            background-image: ;
+            padding: 18px;
+        }
+
+        .navigation a {
+            display: block;
+            color: white;
+            text-align: right;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1rem;
+    
+            color: #131720;
+        }
+        .navigation a:hover {
+            background-color: black;
+            color: aqua;
+            transition-duration: 200ms;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="navigation">
+        <nav>
+            <p>
+                <a href="/Pages/search.html">Get Started</a>
+                <a href="/Pages/about.html">About Us</a>
+                <a href="/Pages/contact.html">Contuct us</a>
+                <a href="/Pages/form.html">You Reviews</a>
+            </p>
+        </nav>
+        <br><hr>
+    </div>
+
+    <h2>Website Review Form</h2>
+
+    <form id="reviewForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <script>
+        // JavaScript code for handling form submission (e.g., sending data to a server)
+        document.getElementById("reviewForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Fetch form data
+            const formData = new FormData(event.target);
+
+            // Convert FormData to JSON
+            const jsonData = {};
+            formData.forEach((value, key) => { jsonData[key] = value; });
+
+            // For demonstration purposes, log the JSON data to the console
+            console.log(jsonData);
+
+            // You can send the data to a server using fetch() or XMLHttpRequest
+            // Example using fetch:
+            /*
+            fetch('url_to_your_server', {
+                method: 'POST',
+                body: JSON.stringify(jsonData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Optionally, display a success message to the user
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Optionally, display an error message to the user
+            });
+            */
+        });
+    </script>
+
 </body>
 </html>
